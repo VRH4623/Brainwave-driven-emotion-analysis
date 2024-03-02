@@ -1,0 +1,67 @@
+										BRAINWAVE DRIVEN EMOTION ANALYSIS 
+									     ---------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+KEYWORDS :
+----------
+* numpy ->  Fundamental package for numerical computing in Python. It's extensively used for array operations.
+* pickle -> Python module used to serialize and deserialize Python objects. Here, it's used to load data from pickled files.
+* pandas -> Library for data manipulation and analysis. It's used for loading and processing data.
+* sklearn.preprocessing.normalize -> Function to normalize data along specified axis.
+* keras -> High-level neural networks API, running on top of TensorFlow or Theano. Used for building and training neural networks.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1. DATA ACQUIESITION :
+-----------------------
+* EEG data is recorded using EEG sensors placed on the scalp of individuals.
+* The data may be collected during specific tasks, stimuli, or in naturalistic settings to capture brainwave activity associated with different emotional states.
+
+2. DATA PRE-PROCESSING :
+------------------------
+* EEG data is preprocessed to remove noise, artifacts, and baseline drift.
+* Common preprocessing steps include filtering, artifact removal, and segmentation into epochs corresponding to specific stimuli or tasks.
+* Fast Fourier Transform (FFT) is applied to the EEG data to extract power spectral density features. This process involves slicing the raw EEG data into windows, computing FFT over each window, and extracting power in specified frequency bands (theta, alpha, low beta, high beta, gamma).
+
+3. DATA LABELLING :
+-------------------
+* Emotion labels are assigned to each segment or epoch of the EEG data.
+* Emotion labels can be obtained through self-reporting, behavioral observations, or physiological responses (e.g., facial expressions, heart rate variability).
+
+4. DATA SPLITTING :
+--------------------
+* The preprocessed EEG data is split into training and testing datasets. Each dataset contains EEG features and corresponding emotion labels.
+
+5. MODEL BUILDING :
+------------------
+* A hybrid CNN-RNN architecture is designed to capture both spatial and temporal dependencies in the EEG data.
+* CNN layers are used to extract spatial features from EEG channels, while RNN layers capture temporal dynamics over time through LONG SHORT TERM MRMORY (LSTM)
+
+6. CNN MODEL :
+--------------
+* A Convolutional Neural Network (CNN) model is built using the Keras library. The model architecture consists of convolutional layers followed by batch normalization, max-pooling, dropout layers, and fully connected layers.
+* The model is designed to learn features from the EEG data and classify them into different emotion classes.
+
+7. MODEL TRAINING :
+---------------------
+* The model is compiled with appropriate loss function (categorical_crossentropy), optimizer (adam), and evaluation metric (accuracy).
+* Training is performed on the training dataset. The model is trained for a specified number of epochs, with training progress monitored.
+
+8. MODEL EVALUATION :
+---------------------
+* The trained model is evaluated on a separate validation or testing dataset to assess its performance.
+* Evaluation metrics such as accuracy, precision, recall, F1-score, and confusion matrix are computed to quantify the model's performance in emotion classification.
+
+9. VISUALISATION :
+------------------
+* The history of training metrics (accuracy and loss) is visualized using matplotlib. This allows for the analysis of training progress and potential overfitting.
+* Additionally, a confusion matrix is generated to visualize the model's performance in predicting different emotion classes.
+
+10. PERFOMANCE ANALYSIS :
+-------------------------
+* The trained model is used to make predictions on the testing dataset. Predictions are compared with the true labels to compute performance metrics such as accuracy, precision, recall, and F1-score.
+* A confusion matrix is analyzed to understand the model's performance in classifying different emotion classes and to identify any misclassifications.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
