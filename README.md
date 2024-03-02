@@ -1,1 +1,1 @@
-# Brainwave-driven-emotion-analysis
+BRAINWAVE-DRIVEN EMOTION ANALYSIS USING CNN & RNN
