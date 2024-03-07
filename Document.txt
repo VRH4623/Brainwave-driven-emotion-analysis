@@ -5,7 +5,7 @@
  
 KEYWORDS :
 ----------
-* numpy ->  Fundamental package for numerical computing in Python. It's extensively used for array operations.
+* numpy ->  Fundamental package for numerical computing in Python. It's extensively used for the array operations.
 * pickle -> Python module used to serialize and deserialize Python objects. Here, it's used to load data from pickled files.
 * pandas -> Library for data manipulation and analysis. It's used for loading and processing data.
 * sklearn.preprocessing.normalize -> Function to normalize data along specified axis.
