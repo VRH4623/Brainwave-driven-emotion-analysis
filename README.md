@@ -1,5 +1,4 @@
-**BRAINWAVE-DRIVEN EMOTION ANALYSIS :
----------------------------------------**
+**BRAINWAVE-DRIVEN EMOTION ANALYSIS :**
 
 1. Dataset collection as values or images.
 2. Data preprocessing by removing null values, performing normalisation.
